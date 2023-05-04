@@ -7,10 +7,10 @@ public class StartController : MonoBehaviour
 {
     void Update()
     {
-        if(Input.GetAxisRaw("Fire1") > 0)
+        if(Input.GetAxisRaw("Fire1") > 0) // Om spelaren trycker "SPACE" startar spelet
         {
             print("START");
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(1); // Main-scenen
         }
     }
 }

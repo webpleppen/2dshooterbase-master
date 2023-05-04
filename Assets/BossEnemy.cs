@@ -14,9 +14,9 @@ public class BossEnemy : MonoBehaviour
 
     void Start()
     {
-        float x = Random.Range(-8f, 8f);
+        float x = Random.Range(-8f, 8f); // mellan vilka x-kordinater fiender slumpmässigt kan "spawna"
         
-        Vector2 position = new Vector2(x, 7);
+        Vector2 position = new Vector2(x, 7); // fienden spawnar vart som helst i x-led på kordinat "7" i y-led 
 
         transform.position = position;
     }
@@ -27,10 +27,10 @@ public class BossEnemy : MonoBehaviour
 
         transform.Translate(movement);
 
-        if (transform.position.y < -7)
+        if (transform.position.y < -7) // Om fienden passerar frame "-7" i scenen:
         {
-            Destroy(this.gameObject);
-        }       
+            Destroy(this.gameObject); // förstör objektet
+        }        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -46,10 +46,10 @@ public class BossEnemy : MonoBehaviour
             }
         }
 
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player") // Om fienden krockar med spelaren så förstörs fienden
         {
             Destroy(this.gameObject);
-            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity); // Explosion
         }
     }
 }

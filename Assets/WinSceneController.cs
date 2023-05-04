@@ -8,10 +8,10 @@ public class WinSceneController : MonoBehaviour
     
     void Update()
     {
-      if(Input.GetAxisRaw("Fire1") > 0)
+      if(Input.GetAxisRaw("Fire1") > 0) // Om spelaren trycker på "SPACE" när den har vunnit:
         {
-            print("START");
-            SceneManager.LoadScene(0);
+            print("WIN");
+            SceneManager.LoadScene(0); // led spelaren till start-scenen där spelaren kan börja om
         }  
     }
 }

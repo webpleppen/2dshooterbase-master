@@ -70,16 +70,16 @@ public class BossController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "shot")
+        if (other.gameObject.tag == "shot") // Om bosssen träffas av ett skott:
         {
-            health--;
-            healthMeter.value = health;
+            health--; // minskar bossens liv
+            healthMeter.value = health; // och minskar samma värde i healthMätaren
 
-            if (health == 0)
+            if (health == 0) // Om bossen har noll liv kvar:
             {
-              Destroy(this.gameObject);
+              Destroy(this.gameObject); // ska bossen försvinna samt skapa en explosion
               Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-              SceneManager.LoadScene(4);
+              SceneManager.LoadScene(4); // spelaren ska sedan ledas till den sista scenen; vinnar-scenen 
             }
         }
     }

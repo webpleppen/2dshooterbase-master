@@ -10,10 +10,10 @@ public class GameOverController : MonoBehaviour
     {
         print("GAMEOVER");
 
-        if(Input.GetAxisRaw("Fire1") > 0)
+        if(Input.GetAxisRaw("Fire1") > 0) // Om spelaren trycker "SPACE" i GAMEOVER-scenen så startar denne om från början
         {
             print(" GO TO START");
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(0); // Spelaren tas till start-scenen
         }
     }
 }

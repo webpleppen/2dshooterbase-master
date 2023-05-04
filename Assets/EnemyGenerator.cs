@@ -11,16 +11,16 @@ public class EnemyGenerator : MonoBehaviour
     float spawnTimer = 0;
 
     [SerializeField]
-    float timeBetweenEnemySpawns = 2f;
+    float timeBetweenEnemySpawns = 2f; // hur ofta fiender "spawnar"
 
-    void Update()
+    void Update() 
     {
-       spawnTimer += Time.deltaTime;
+       spawnTimer += Time.deltaTime; // avgör när nästa fiende ska genereras
 
        if (spawnTimer > timeBetweenEnemySpawns)
        {
-        Instantiate(enemyPrefab);
-        spawnTimer = 0;
+        Instantiate(enemyPrefab); // spawnar fienden
+        spawnTimer = 0;           // startar om spawnTimer
        } 
     }
 }

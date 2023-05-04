@@ -13,7 +13,7 @@ public class EnemyController : MonoBehaviour
 
     int health = 1;
 
-    void Start()
+    void Start() // allting samma som bossEnemy
     {
         float x = Random.Range(-8f, 8f);
         

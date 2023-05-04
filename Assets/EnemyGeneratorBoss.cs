@@ -12,11 +12,11 @@ public class EnemyGeneratorBoss : MonoBehaviour
     [SerializeField]
     float timeBetweenEnemySpawns = 0.1f; // när "BossScenen" är igång så spawnar fiender snabbare genom denna separata "Spawner"
 
-    void Update()
+    void Update() // samma som vanliga EnemyGenerator fast snabbare
     {
        spawnTimer += Time.deltaTime;
 
-       if (spawnTimer > timeBetweenEnemySpawns)
+       if (spawnTimer > timeBetweenEnemySpawns) // får fiender att "spawna"
        {
         Instantiate(enemyPrefab);
         spawnTimer = 0;

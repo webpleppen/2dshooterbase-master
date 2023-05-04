@@ -7,6 +7,6 @@ public class ExplosionController : MonoBehaviour
     
     void Start()
     {
-       Destroy(this.gameObject, 0.5f); 
+       Destroy(this.gameObject, 0.5f); // Hur snabbt explosion animationen ska genomföras
     }
 }
