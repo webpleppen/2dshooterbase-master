@@ -79,7 +79,7 @@ public class BossController : MonoBehaviour
             {
               Destroy(this.gameObject); // ska bossen försvinna samt skapa en explosion
               Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-              SceneManager.LoadScene(4); // spelaren ska sedan ledas till den sista scenen; vinnar-scenen 
+              SceneManager.LoadScene(4); // spelaren ska sedan ledas till den sista scenen; vinnar-scenen    
             }
         }
     }
